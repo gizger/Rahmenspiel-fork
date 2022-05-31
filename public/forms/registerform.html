@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:b="http://www.w3.org/1999/html">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Register</title>
+        <style>
+            .register {
+                background: #eceeee;
+                border: 1px solid #42464b;
+                border-radius: 6px;
+                height: 520px;
+                margin: 20px auto 0;
+                width: 300px;
+            }
+            input[type="password"],
+            input[type="text"] {
+                display: block;
+                background: linear-gradient(top, #d6d7d7, #dee0e0);
+                border: 1px solid #a1a3a3;
+                border-radius: 4px;
+                box-shadow: 0 1px #fff;
+                box-sizing: border-box;
+                color: #696969;
+                height: 39px;
+                margin: 32px 0 0 29px;
+                padding-left: 37px;
+                transition: box-shadow 0.3s;
+                width: 240px;
+            }
+            input[type="password"]:focus,
+            input[type="text"]:focus {
+                box-shadow: 0 0 4px 1px rgba(55, 166, 155, 0.3);
+                outline: 0;
+            }
+            .forgot {
+                color: #7f7f7f;
+                display: inline-block;
+                float: right;
+                font: 12px/1 sans-serif;
+                left: -19px;
+                position: relative;
+                text-decoration: none;
+                top: 5px;
+                transition: color 0.4s;
+            }
+            .forgot:hover {
+                color: #3b3b3b;
+            }
+            input[type="submit"] {
+                width: 240px;
+                height: 35px;
+                display: block;
+                font-family: Arial, "Helvetica", sans-serif;
+                font-size: 16px;
+                font-weight: bold;
+                color: #fff;
+                text-decoration: none;
+                text-transform: uppercase;
+                text-align: center;
+                text-shadow: 1px 1px 0px #37a69b;
+                padding-top: 6px;
+                margin: 25px 0 0 29px;
+                position: relative;
+                cursor: pointer;
+                border: none;
+                background-color: #37a69b;
+                background-image: linear-gradient(top, #3db0a6, #3111);
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+                box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #497a78,
+                0px 10px 5px #999;
+            }
+            .shadow {
+                background: #000;
+                border-radius: 12px 12px 4px 4px;
+                box-shadow: 0 0 20px 10px #000;
+                height: 12px;
+                margin: 30px auto;
+                opacity: 0.2;
+                width: 270px;
+            }
+            input[type="submit"]:active {
+                top: 3px;
+                box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #31524d,
+                0px 5px 3px #999;
+            }
+            #invalidEmail, #invalidPassword, #invalidRepeatPassword {
+                visibility: hidden;
+                display: inline-block;
+                left: 32px;
+                background-color: #ff0000;
+                border-radius:4px;
+                border: 1px solid #aeaeae;
+                position: absolute;
+                z-index: 1;
+                padding: 5px;
+                transition: opacity 0.5s;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="register">
+            <input type="text" placeholder="First Name" id="firstName" name="firstName">
+            <input type="text" placeholder="Last Name" id="lastName" name="lastName">
+            <input type="text" placeholder="Email" id="email" name="email"/>
+            <span id="invalidEmail">Invalid email</span>
+            <input type="password"
+                   placeholder="Password"
+                   id="password"
+                   name="password"/>
+            <span id="invalidPassword">Invalid password</span>
+            <input type="password"
+                   placeholder="Repeat Password"
+                   id="repeatPassword"
+                   name="repeatPassword"/>
+            <span id="invalidRepeatPassword">Passwords do not match</span>
+            <input type="submit" value="Save" name="saveButton" style="margin-top: 35px"/>
+            <input type="submit" value="Back to Login-Page" name="loginButton" />
+        </div>
+        <div class="shadow"></div>
+    </body>
+</html>
